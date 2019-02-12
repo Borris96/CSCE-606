@@ -1,0 +1,416 @@
+Warning: PATH set to RVM ruby but GEM_HOME and/or GEM_PATH not set, see:
+    https://github.com/rvm/rvm/issues/3212
+
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku login
+WARNING
+WARNING Node version must be >=8.0.0 to use this CLI
+WARNING Current node version: 6.16.0
+WARNING
+/home/ec2-user/.nvm/versions/node/v6.16.0/lib/node_modules/heroku/node_modules/@oclif/command/lib/command.js:23
+    async _run() {
+          ^^^^
+
+SyntaxError: Unexpected identifier
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at Module._compile (module.js:549:28)
+    at Object.Module._extensions..js (module.js:586:10)
+    at Module.load (module.js:494:32)
+    at tryModuleLoad (module.js:453:12)
+    at Function.Module._load (module.js:445:3)
+    at Module.require (module.js:504:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/home/ec2-user/.nvm/versions/node/v6.16.0/lib/node_modules/heroku/node_modules/@oclif/command/lib/index.js:24:19)
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ cd
+ec2-user:~ $ cd environment
+ec2-user:~/environment $ npm install -g update-node
+/home/ec2-user/.nvm/versions/node/v6.16.0/bin/update-node -> /home/ec2-user/.nvm/versions/node/v6.16.0/lib/node_modules/update-node/bin/update-node.js
+/home/ec2-user/.nvm/versions/node/v6.16.0/lib
+└─┬ update-node@0.1.0 
+  ├─┬ buntstift@0.4.0 
+  │ ├─┬ chalk@1.1.1 
+  │ │ ├── ansi-styles@2.2.1 
+  │ │ ├── escape-string-regexp@1.0.5 
+  │ │ ├─┬ has-ansi@2.0.0 
+  │ │ │ └── ansi-regex@2.1.1 
+  │ │ ├── strip-ansi@3.0.1 
+  │ │ └── supports-color@2.0.0 
+  │ ├── markup-js@1.5.21 
+  │ └─┬ node-spinner@0.0.4 
+  │   └── util-extend@1.0.3 
+  └─┬ commander@2.9.0 
+    └── graceful-readlink@1.0.1 
+
+ec2-user:~/environment $ heroku --version
+WARNING
+WARNING Node version must be >=8.0.0 to use this CLI
+WARNING Current node version: 6.16.0
+WARNING
+/home/ec2-user/.nvm/versions/node/v6.16.0/lib/node_modules/heroku/node_modules/@oclif/command/lib/command.js:23
+    async _run() {
+          ^^^^
+
+SyntaxError: Unexpected identifier
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at Module._compile (module.js:549:28)
+    at Object.Module._extensions..js (module.js:586:10)
+    at Module.load (module.js:494:32)
+    at tryModuleLoad (module.js:453:12)
+    at Function.Module._load (module.js:445:3)
+    at Module.require (module.js:504:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/home/ec2-user/.nvm/versions/node/v6.16.0/lib/node_modules/heroku/node_modules/@oclif/command/lib/index.js:24:19)
+ec2-user:~/environment $ nvm install 8
+Downloading https://nodejs.org/dist/v8.15.0/node-v8.15.0-linux-x64.tar.xz...
+######################################################################## 100.0%
+Now using node v8.15.0 (npm v6.4.1)
+ec2-user:~/environment $ heroku --version
+bash: heroku: command not found
+ec2-user:~/environment $ npm install -g heroku
+npm WARN deprecated cross-spawn-async@2.2.5: cross-spawn no longer requires a build toolchain, use it instead
+/home/ec2-user/.nvm/versions/node/v8.15.0/bin/heroku -> /home/ec2-user/.nvm/versions/node/v8.15.0/lib/node_modules/heroku/bin/run
+
+> date-fns@2.0.0-alpha.27 postinstall /home/ec2-user/.nvm/versions/node/v8.15.0/lib/node_modules/heroku/node_modules/date-fns
+> node ./docs/printV2Notice.js
+
+
+
+
+  Thank you for testing (⩗) date-fns v2!
+
+  In v2 we've introduced a number of breaking changes
+  that make date-fns even more consistent and reliable.
+  Please read the changelog carefully: https://git.io/fxCWb
+
+  Please support us at Open Collective: https://opencollective.com/date-fns
+
+
+
++ heroku@7.20.0
+added 384 packages from 233 contributors in 22.602s
+ec2-user:~/environment $ heroku --version
+heroku/7.20.0 linux-x64 node-v8.15.0
+ec2-user:~/environment $ cd rottenpotatoes-rails-intro
+RVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ec2-user/environment/rottenpotatoes-rails-intro/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ec2-user/.ssh/id_rsa): password.txt
+password.txt already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in password.txt.
+Your public key has been saved in password.txt.pub.
+The key fingerprint is:
+SHA256:CLMekNAFP56Fr2G7oQOzyf5vdwjETyukpBZkw0zeJfM ec2-user@ip-172-31-46-206
+The key's randomart image is:
++---[RSA 2048]----+
+|=o.=..           |
+|.Boo=.           |
+|o.+.BE.          |
+| . + % o         |
+|  + @ = S        |
+|oo + B o         |
+|o=  = o .        |
+|o... + o .       |
+|..oo+.. .        |
++----[SHA256]-----+
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku login
+heroku: Press any key to open up the browser to login or q to exit: 
+ ›   Warning: Cannot open browser. Go to https://cli-auth.heroku.com/auth/browser/995cfb50-e36b-4e61-82c5-a65546ead325 to finish login or run heroku login --interactive
+ ›
+Logging in... done
+Logged in as borrispoe96@gmail.com
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku keys:add
+Could not find an existing SSH key at ~/.ssh/id_rsa.pub
+? Would you like to generate a new one? Yes
+Generating public/private rsa key pair.
+Your identification has been saved in /home/ec2-user/.ssh/id_rsa.
+Your public key has been saved in /home/ec2-user/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:/Q4FoZRP1MQ/ZMWCeLyJlzTDw33XJBwzN0NyOBwGM04 ec2-user@ip-172-31-46-206
+The key's randomart image is:
++---[RSA 2048]----+
+|        .ooE+BOX=|
+|       ...=.^+O=B|
+|        .o.= @.o.|
+|         .o.= o  |
+|        S ...  . |
+|           o     |
+|          . .    |
+|           o     |
+|            .    |
++----[SHA256]-----+
+Uploading /home/ec2-user/.ssh/id_rsa.pub SSH key... done
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku create
+Creating app... done, ⬢ arcane-lowlands-18326
+https://arcane-lowlands-18326.herokuapp.com/ | https://git.heroku.com/arcane-lowlands-18326.git
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ git push heroku master
+Counting objects: 169, done.
+Compressing objects: 100% (109/109), done.
+Writing objects: 100% (169/169), 42.90 KiB | 21.45 MiB/s, done.
+Total 169 (delta 46), reused 169 (delta 46)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.4.0
+remote: -----> Installing dependencies using bundler 1.15.2
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.16.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        Fetching gem metadata from https://rubygems.org/...........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Fetching rake 12.3.1
+remote:        Fetching concurrent-ruby 1.0.5
+remote:        Fetching minitest 5.11.3
+remote:        Installing minitest 5.11.3
+remote:        Installing rake 12.3.1
+remote:        Installing concurrent-ruby 1.0.5
+remote:        Fetching thread_safe 0.3.6
+remote:        Installing thread_safe 0.3.6
+remote:        Fetching builder 3.2.3
+remote:        Installing builder 3.2.3
+remote:        Fetching erubis 2.7.0
+remote:        Fetching mini_portile2 2.3.0
+remote:        Installing mini_portile2 2.3.0
+remote:        Fetching crass 1.0.4
+remote:        Fetching rack 1.6.10
+remote:        Installing erubis 2.7.0
+remote:        Installing crass 1.0.4
+remote:        Installing rack 1.6.10
+remote:        Fetching mini_mime 1.0.0
+remote:        Installing mini_mime 1.0.0
+remote:        Fetching arel 6.0.4
+remote:        Installing arel 6.0.4
+remote:        Using bundler 1.15.2
+remote:        Fetching coffee-script-source 1.12.2
+remote:        Installing coffee-script-source 1.12.2
+remote:        Fetching execjs 2.7.0
+remote:        Installing execjs 2.7.0
+remote:        Fetching thor 0.20.0
+remote:        Fetching ffi 1.9.23
+remote:        Installing thor 0.20.0
+remote:        Fetching temple 0.8.0
+remote:        Installing temple 0.8.0
+remote:        Fetching tilt 2.0.8
+remote:        Installing tilt 2.0.8
+remote:        Fetching multi_xml 0.6.0
+remote:        Installing multi_xml 0.6.0
+remote:        Fetching multi_json 1.13.1
+remote:        Installing multi_json 1.13.1
+remote:        Installing ffi 1.9.23 with native extensions
+remote:        Fetching json 1.8.6
+remote:        Fetching pg 0.21.0
+remote:        Installing json 1.8.6 with native extensions
+remote:        Installing pg 0.21.0 with native extensions
+remote:        Fetching rails_serve_static_assets 0.0.5
+remote:        Installing rails_serve_static_assets 0.0.5
+remote:        Fetching rails_stdout_logging 0.0.5
+remote:        Installing rails_stdout_logging 0.0.5
+remote:        Fetching rb-fsevent 0.10.3
+remote:        Installing rb-fsevent 0.10.3
+remote:        Fetching rdoc 4.3.0
+remote:        Installing rdoc 4.3.0
+remote:        Fetching turbolinks-source 5.1.0
+remote:        Installing turbolinks-source 5.1.0
+remote:        Fetching i18n 0.9.5
+remote:        Installing i18n 0.9.5
+remote:        Fetching tzinfo 1.2.5
+remote:        Installing tzinfo 1.2.5
+remote:        Fetching nokogiri 1.8.2
+remote:        Installing nokogiri 1.8.2 with native extensions
+remote:        Fetching mail 2.7.0
+remote:        Installing mail 2.7.0
+remote:        Fetching rack-test 0.6.3
+remote:        Installing rack-test 0.6.3
+remote:        Fetching sprockets 3.7.1
+remote:        Installing sprockets 3.7.1
+remote:        Fetching coffee-script 2.4.1
+remote:        Installing coffee-script 2.4.1
+remote:        Fetching uglifier 4.1.10
+remote:        Installing uglifier 4.1.10
+remote:        Fetching httparty 0.16.2
+remote:        Installing httparty 0.16.2
+remote:        Fetching haml 5.0.4
+remote:        Installing haml 5.0.4
+remote:        Fetching rails_12factor 0.0.3
+remote:        Installing rails_12factor 0.0.3
+remote:        Fetching turbolinks 5.1.1
+remote:        Installing turbolinks 5.1.1
+remote:        Fetching activesupport 4.2.10
+remote:        Installing activesupport 4.2.10
+remote:        Fetching rb-inotify 0.9.10
+remote:        Installing rb-inotify 0.9.10
+remote:        Fetching themoviedb 1.0.1
+remote:        Installing themoviedb 1.0.1
+remote:        Fetching rails-deprecated_sanitizer 1.0.3
+remote:        Installing rails-deprecated_sanitizer 1.0.3
+remote:        Fetching globalid 0.4.1
+remote:        Installing globalid 0.4.1
+remote:        Fetching activemodel 4.2.10
+remote:        Installing activemodel 4.2.10
+remote:        Fetching jbuilder 2.7.0
+remote:        Installing jbuilder 2.7.0
+remote:        Fetching sass-listen 4.0.0
+remote:        Installing sass-listen 4.0.0
+remote:        Fetching activejob 4.2.10
+remote:        Installing activejob 4.2.10
+remote:        Fetching activerecord 4.2.10
+remote:        Installing activerecord 4.2.10
+remote:        Fetching sass 3.5.6
+remote:        Installing sass 3.5.6
+remote:        Fetching rails-dom-testing 1.0.9
+remote:        Fetching loofah 2.2.2
+remote:        Installing rails-dom-testing 1.0.9
+remote:        Installing loofah 2.2.2
+remote:        Fetching rails-html-sanitizer 1.0.4
+remote:        Installing rails-html-sanitizer 1.0.4
+remote:        Fetching actionview 4.2.10
+remote:        Fetching sdoc 0.4.2
+remote:        Installing actionview 4.2.10
+remote:        Installing sdoc 0.4.2
+remote:        Fetching actionpack 4.2.10
+remote:        Installing actionpack 4.2.10
+remote:        Fetching actionmailer 4.2.10
+remote:        Fetching railties 4.2.10
+remote:        Fetching sprockets-rails 3.2.1
+remote:        Installing actionmailer 4.2.10
+remote:        Installing sprockets-rails 3.2.1
+remote:        Installing railties 4.2.10
+remote:        Fetching jquery-rails 4.3.3
+remote:        Fetching rails 4.2.10
+remote:        Fetching coffee-rails 4.1.1
+remote:        Installing coffee-rails 4.1.1
+remote:        Fetching sass-rails 5.0.7
+remote:        Installing sass-rails 5.0.7
+remote:        Installing jquery-rails 4.3.3
+remote:        Installing rails 4.2.10
+remote:        Bundle complete! 18 Gemfile dependencies, 63 gems now installed.
+remote:        Gems in the groups development and test were not installed.
+remote:        Bundled gems are installed into ./vendor/bundle.
+remote:        Post-install message from httparty:
+remote:        When you HTTParty, you must party hard!
+remote:        Bundle completed (43.26s)
+remote:        Cleaning up the bundler cache.
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.16.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        The latest bundler is 2.0.1, but you are currently running 1.15.2.
+remote:        To update, run `gem install bundler`
+remote: -----> Installing node-v10.14.1-linux-x64
+remote: -----> Detecting rake tasks
+remote: -----> Preparing app for Rails asset pipeline
+remote:        Running: rake assets:precompile
+remote:        I, [2019-02-06T06:00:37.034741 #1310]  INFO -- : Writing /tmp/build_62647704508bb4b88527d3e5d343917a/public/assets/application-8980f4e052b9a07bac28e6f4edfc9897485c2e451529ad2e6e742f849caa6aa5.js
+remote:        I, [2019-02-06T06:00:37.035414 #1310]  INFO -- : Writing /tmp/build_62647704508bb4b88527d3e5d343917a/public/assets/application-8980f4e052b9a07bac28e6f4edfc9897485c2e451529ad2e6e742f849caa6aa5.js.gz
+remote:        I, [2019-02-06T06:00:37.060888 #1310]  INFO -- : Writing /tmp/build_62647704508bb4b88527d3e5d343917a/public/assets/application-34270ba280b2ed84328590e654e2f0758d644164b1b8cc226094b5f1d6290e3d.css
+remote:        I, [2019-02-06T06:00:37.061348 #1310]  INFO -- : Writing /tmp/build_62647704508bb4b88527d3e5d343917a/public/assets/application-34270ba280b2ed84328590e654e2f0758d644164b1b8cc226094b5f1d6290e3d.css.gz
+remote:        Asset precompilation completed (5.04s)
+remote:        Cleaning assets
+remote:        Running: rake assets:clean
+remote: -----> Detecting rails configuration
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        Detecting rails configuration failed
+remote:        set HEROKU_DEBUG_RAILS_RUNNER=1 to debug
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        No Procfile detected, using the default web server.
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server
+remote: 
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> console, rake, web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 45.8M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://arcane-lowlands-18326.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/arcane-lowlands-18326.git
+ * [new branch]      master -> master
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku logs
+2019-02-06T05:59:43.000000+00:00 app[api]: Build started by user borrispoe96@gmail.com
+2019-02-06T06:00:47.219728+00:00 app[api]: Release v3 created by user borrispoe96@gmail.com
+2019-02-06T06:00:48.395965+00:00 app[api]: Scaled to console@0:Free rake@0:Free web@1:Free by user borrispoe96@gmail.com
+2019-02-06T06:00:48.378843+00:00 app[api]: Deploy 39ebb848 by user borrispoe96@gmail.com
+2019-02-06T06:00:52.878432+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 58176 -e production`
+2019-02-06T06:00:52.000000+00:00 app[api]: Build succeeded
+2019-02-06T06:00:55.864393+00:00 app[web.1]: Array values in the parameter to `Gem.paths=` are deprecated.
+2019-02-06T06:00:55.864411+00:00 app[web.1]: Please use a String or nil.
+2019-02-06T06:00:55.864427+00:00 app[web.1]: An Array ({"GEM_PATH"=>["/app/vendor/bundle/ruby/2.4.0", "/app/.gem/ruby/2.4.0", "/app/vendor/ruby-2.4.0/lib/ruby/gems/2.4.0"]}) was passed in from bin/rails:3:in `load'
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku run rake db:migrate
+Running rake db:migrate on ⬢ arcane-lowlands-18326... up, run.7912 (Free)
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /app/vendor/bundle/ruby/2.4.0/gems/activesupport-4.2.10/lib/active_support/dependencies.rb:240:in `load_dependency'
+   (1260.9ms)  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+   (67.6ms)  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  ActiveRecord::SchemaMigration Load (1.5ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+   (1.3ms)  BEGIN
+== 20150809022253 CreateMovies: migrating =====================================
+-- create_table(:movies)
+   (1609.1ms)  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "rating" character varying, "description" text, "release_date" timestamp, "created_at" timestamp, "updated_at" timestamp) 
+   -> 1.6098s
+== 20150809022253 CreateMovies: migrated (1.6099s) ============================
+
+  SQL (1.5ms)  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150809022253"]]
+   (3.1ms)  COMMIT
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku run rake db:seed
+Running rake db:seed on ⬢ arcane-lowlands-18326... up, run.4296 (Free)
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /app/vendor/bundle/ruby/2.4.0/gems/activesupport-4.2.10/lib/active_support/dependencies.rb:240:in `load_dependency'
+  ActiveRecord::SchemaMigration Load (3.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+   (5.0ms)  BEGIN
+  SQL (1.6ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.076831"], ["updated_at", "2019-02-06 06:03:03.076831"]]
+   (4.0ms)  COMMIT
+   (21.2ms)  BEGIN
+  SQL (6.6ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.110267"], ["updated_at", "2019-02-06 06:03:03.110267"]]
+   (21.8ms)  COMMIT
+   (4.4ms)  BEGIN
+  SQL (2.5ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.179772"], ["updated_at", "2019-02-06 06:03:03.179772"]]
+   (5.1ms)  COMMIT
+   (9.6ms)  BEGIN
+  SQL (3.5ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.199963"], ["updated_at", "2019-02-06 06:03:03.199963"]]
+   (2.2ms)  COMMIT
+   (3.2ms)  BEGIN
+  SQL (8.3ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.211892"], ["updated_at", "2019-02-06 06:03:03.211892"]]
+   (6.4ms)  COMMIT
+   (12.9ms)  BEGIN
+  SQL (3.7ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.242188"], ["updated_at", "2019-02-06 06:03:03.242188"]]
+   (7.6ms)  COMMIT
+   (7.2ms)  BEGIN
+  SQL (6.5ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.263798"], ["updated_at", "2019-02-06 06:03:03.263798"]]
+   (11.2ms)  COMMIT
+   (14.1ms)  BEGIN
+  SQL (7.0ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.298879"], ["updated_at", "2019-02-06 06:03:03.298879"]]
+   (11.8ms)  COMMIT
+   (5.2ms)  BEGIN
+  SQL (48.5ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.325865"], ["updated_at", "2019-02-06 06:03:03.325865"]]
+   (17.9ms)  COMMIT
+   (7.2ms)  BEGIN
+  SQL (4.7ms)  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2019-02-06 06:03:03.402437"], ["updated_at", "2019-02-06 06:03:03.402437"]]
+   (9.2ms)  COMMIT
+ec2-user:~/environment/rottenpotatoes-rails-intro (master) $ heroku open
+ ▸    Error opening web browser.
+ ▸    Error: Exited with code 3
+ ▸    
+ ▸    Manually visit https://arcane-lowlands-18326.herokuapp.com/ in your browser.
